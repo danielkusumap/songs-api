@@ -7,15 +7,15 @@ data = pd.read_csv("data/songsDataset.csv")
 @app.route("/")
 def index():
     return """
-these are examples of using the API
-https://songs-api-dnl.herokuapp.com/api?artist=<artist name>
-this will return all the songs from the artist and also the Youtube Music link
+these are examples of using the API</br>
+https://songs-api-dnl.herokuapp.com/api?artist=<artist name></br>
+this will return all the songs from the artist and also the Youtube Music link</br></br>
 
-if you need the year of the song, please specify the year and Greater Than Equal (GTE).
-https://songs-api-dnl.herokuapp.com/api?artist=<artist name>&year=<year>&yearGTE=<true/false>
+if you need the year of the song, please specify the year and Greater Than Equal (GTE).</br>
+https://songs-api-dnl.herokuapp.com/api?artist=<artist name>&year=<year>&yearGTE=<true/false></br></br>
 
-if yearGTE is true then the API will return all the songs from the artist that has a year release greater than the specific year from the input.
-if yearGTE is false then the API will return all the songs from the artist that has a release equal to the specific year from the input.
+if yearGTE is true then the API will return all the songs from the artist that has a year release greater than the specific year from the input.</br>
+if yearGTE is false then the API will return all the songs from the artist that has a release equal to the specific year from the input.</br>
     """
 
 @app.route("/api", methods=["GET"])

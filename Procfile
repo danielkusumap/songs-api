@@ -1,1 +1,1 @@
-web: gunicorn app:songs_api.py
+web: gunicorn app:songs_api

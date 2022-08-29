@@ -1,1 +1,1 @@
-web: gunicorn wsgi:app
+web: gunicorn songs_api:app

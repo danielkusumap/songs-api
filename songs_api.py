@@ -1,8 +1,16 @@
 from flask import Flask, render_template, request, session, redirect, url_for, flash, jsonify
 import pandas as pd
+from add_yt_music_link import find_link_and_combine
+import threading
+
 
 app = Flask(__name__)
 data = pd.read_csv("data/songsDataset.csv")
+
+@app.route("/updatedata")
+def updateData():
+    threading.Thread(target=find_link_and_combine).start()
+    return "updating data ..."
 
 @app.route("/")
 def index():

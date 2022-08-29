@@ -50,8 +50,8 @@ def api():
         response.headers.add('Access-Control-Allow-Origin', '*')
         return response
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True)
 
 # data = pd.read_csv("data/songsDataset.csv")
 # a = "Tracy Chapman"
